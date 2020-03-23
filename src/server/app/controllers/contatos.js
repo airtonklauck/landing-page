@@ -1,15 +1,16 @@
 module.exports = app => {
-	app.get('/contatos/cadastro', (req, res) => {
-		res.marko(require('../views/contatos/cadastro/cadastro.marko'));
-	});
 
 	app.post('/contatos/contato', (req, res) => {
+
+		const connectionFactory = require('../persistencia/ConnectionFactory');
+		
+		const ContatoDao = require('../persistencia/ContatoDao');
 
 		let contato = req.body;
 		contato._data = new Date;
 
-		let connection = app.src.server.app.persistencia.connectionFactory();
-		let contatoDao = new app.src.server.app.persistencia.ContatoDao(connection);
+		let contatoDao = new ContatoDao(connectionFactory
+		.create('localhost', 'root', '6tgad9avk', 'agroambiental'));
 
 		contatoDao.criaTabela();
 		contatoDao.salva(contato, function(erro, resultado) {

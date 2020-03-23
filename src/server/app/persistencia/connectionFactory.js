@@ -1,14 +1,16 @@
-let mysql  = require('mysql');
+class ConnectionFactory {
+	
+	static create(host, user, password, database) {
 
-function createDBConnection(){
-        return mysql.createConnection({
-            host: 'localhost',
-            user: 'root',
-            password: '6tgad9avk',
-            database: 'agroambiental'
+		let mysql  = require('mysql');
+
+		return mysql.createConnection({
+            host: host,
+            user: user,
+            password: password,
+            database: database
         });
+	}
 }
 
-module.exports = function() {
-    return createDBConnection;
-}
+module.exports = ConnectionFactory;
