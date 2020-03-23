@@ -1,0 +1,142 @@
+html {
+	background: linear-gradient(#0b7285, #0ca678);
+	background-repeat: no-repeat;
+	font-size: 100%;
+	color: #fff;
+}
+
+@media (min-width: 500px) {
+    html {
+        font-size: 110%;
+    }
+}
+
+@media (min-width: 600px) {
+    html {
+        font-size: 120%;
+    }
+}
+
+@media (min-width: 700px) {
+    html {
+        font-size: 130%;
+    }
+}
+
+@media (min-width: 800px) {
+    html {
+        font-size: 140%;
+    }
+}
+
+@media (min-width: 900px) {
+    html {
+        font-size: 150%;
+    }
+}
+
+@media (min-width: 1000px) {
+    html {
+        font-size: 160%;
+    }
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	background-image: url("../imagens/home-scene.svg");
+	background-position: top;
+}
+
+.container {
+	width: 33ch;
+	margin: auto;
+	padding-bottom: 5em;
+}
+
+@media (min-width: 1100px) {
+    .container {
+        width: 55ch;
+    }
+}
+
+.cabecalho {
+	margin-top: 1.5em;
+	font-size: 2em;
+	text-align: center;
+}
+
+p {
+	padding-top: 1em;
+	font-size: 1.5em;
+	font-weight: 900;
+}
+
+.cabecalho, p {
+	line-height: 1.5;
+}
+
+@media (min-width: 1100px) {
+    p {
+        text-align: justify;
+    }
+}
+
+main {
+	margin-top: 2em;
+}
+
+#flash-messages {
+	margin-top: 1em;
+	padding: 1em;
+	text-align: center;
+}
+
+.formulario {
+	margin-top: 1em;
+	font-size: 1.2em;
+}
+
+label {
+	margin-top: 1em;
+	display: block;
+}
+
+input {
+	margin-top: .5em;
+	width: 100%;
+	line-height: 2;
+	font-size: inherit;
+	padding-left: .5em;
+}
+
+.botao {
+	margin-top: 2em;
+	margin-bottom: 5em;
+	background-color: #74b816;
+	padding: .8em;
+	color: #fff;
+    font-size: 1.4em;
+    width: 100%;
+}
+
+.botao, input {
+	border-radius: .2rem;
+	border: 0;
+	box-sizing: border-box;
+}
+
+.whatsapp {
+	background-image: url("../imagens/whatsapp.svg");
+	background-repeat: no-repeat;
+    position: fixed;
+    display: inline-block;
+    height: 3em;
+    width: 3em;
+    background-color: #fff;
+    background-position: center;
+    border-radius: 50%;
+    text-indent: -9999px;
+    z-index: 1;
+    bottom: .5em;
+    right: .5em;
+}

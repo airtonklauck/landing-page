@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../app-es6/views/LoaderView.js"],"names":["LoaderView","View"],"mappings":";;;;;;;;;;IAAMA,U;;;;;;;;;;;6BAEM;AACV;AACA;;;;EAJuBC,I","file":"LoaderView.js","sourcesContent":["class LoaderView extends View {\r\n\r\n\ttemplate() {\r\n\t\treturn `<span class=\"loader\"></span>`;\r\n\t}\r\n}"]}
