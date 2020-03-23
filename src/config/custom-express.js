@@ -9,13 +9,13 @@ module.exports = () => {
 
 	let app = express();
 
-	app.use('/estatico', express.static('src/app/estaticos'));
+	app.use('/client', express.static('src/client'));
 	app.use(bodyParser.urlencoded({extended: true}));
 	app.use(bodyParser.json());
 
 	consign()
-	.include('src/app/controllers')
-	.then('src/app/persistencia')
+	.include('src/server/app/controllers')
+	.then('src/server/app/persistencia')
 	.into(app);
 
 	return app;

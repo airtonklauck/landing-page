@@ -8,8 +8,8 @@ module.exports = app => {
 		let contato = req.body;
 		contato._data = new Date;
 
-		let connection = app.src.app.persistencia.connectionFactory();
-		let contatoDao = new app.src.app.persistencia.ContatoDao(connection);
+		let connection = app.src.server.app.persistencia.connectionFactory();
+		let contatoDao = new app.src.server.app.persistencia.ContatoDao(connection);
 
 		contatoDao.criaTabela();
 		contatoDao.salva(contato, function(erro, resultado) {
