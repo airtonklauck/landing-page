@@ -19,8 +19,8 @@
   "author": "Airton Vicente Klauck",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "express": "4.16.3",
+    "body-parser": "^1.20.1",
+    "express": "4.18.2",
     "marko": "^4.18.14",
     "mysql": "^2.17.1"
   },
